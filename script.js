@@ -121,3 +121,11 @@ function logout() {
     localStorage.removeItem("user");
     location.reload();
 }
+fetch("http://localhost:5000/api/test")
+  .then(res => res.json())
+  .then(data => {
+    console.log("✅ Backend connected:", data);
+  })
+  .catch(err => {
+    console.error("❌ Backend NOT connected:", err);
+  });

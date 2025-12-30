@@ -67,6 +67,64 @@ nav button.active-link {
     border-color: var(--primary);
     transform: translateY(-2px);
 }
+.about-section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.about-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.about-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.about-block img {
+    width: 45%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-text {
+    width: 55%;
+}
+
+.about-text h3 {
+    margin-bottom: 10px;
+}
+
+.about-text ul {
+    padding-left: 20px;
+}
+
+.about-text li {
+    margin-bottom: 8px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .about-block,
+    .about-block.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-block img,
+    .about-text {
+        width: 100%;
+    }
+}
 
 /* =========================
    MAIN CONTENT
