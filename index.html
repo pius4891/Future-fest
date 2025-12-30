@@ -5,64 +5,200 @@
     <title>Logic Spark Entertainment</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 <body>
 
-<header>
-    <img src="images/logo.jpg" alt="Logic Spark Logo" class="logo">
-    <h1>Logic Spark Entertainment</h1>
+<header class="site-header">
+  <div class="header-container">
 
-    <nav>
-        <button data-page="home" class="active-link">Home</button>
-        <button data-page="about">About</button>
-        <button data-page="activities">Activities</button>
-        <button data-page="shop">Shop</button>
-        <button data-page="media">Media</button>
-        <button data-page="contact">Contact</button>
-        <button data-page="sponsor">Sponsor</button>
-        <button onclick="window.location.href='auth.html'">Login</button>
+    <!-- Brand -->
+    <div class="brand">
+      <img src="images/logo.jpg" alt="Logic Spark Logo" class="logo">
+      <span class="brand-name">Logic Spark</span>
+    </div>
 
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <button data-page="home" class="active-link">Home</button>
+      <button data-page="about">About</button>
+      <button data-page="activities">Activities</button>
+      <button data-page="shop">Shop</button>
+      <button data-page="media">Media</button>
+      <button data-page="contact">Contact</button>
+      <button data-page="sponsor">Sponsor</button>
     </nav>
+
+    <!-- Actions -->
+    <div class="header-actions">
+      <button class="login-btn" onclick="window.location.href='auth.html'">
+        <i class="fas fa-user"></i> Login
+      </button>
+    </div>
+
+  </div>
 </header>
 
+
 <main>
+<!-- ================= HOME PAGE ================= -->
+<section id="home" class="page active home-section">
 
-    <!-- HOME SECTION -->
-    <section id="home" class="page active home-section">
-        <div class="home-content">
-          <div class="home-text">
-            <h2 class="fade-in">Welcome to Logic Spark</h2>
+  <!-- HERO -->
+  <div class="home-hero">
+    <div class="home-text">
+      <h1>Igniting Talent.<br>Empowering Youth.</h1>
 
-            <p class="slide-in">
-                Logic Spark Entertainment is a creative hub dedicated to
-                <strong>entertainment</strong>, <strong>education</strong>, and
-                <strong>youth empowerment</strong>. We ignite talent, amplify voices,
-                and build platforms where creativity meets opportunity.
-            </p>
+      <p>
+        <strong>Logic Spark Entertainment</strong> is a creative hub connecting
+        young creatives with real opportunities through entertainment,
+        education, and mentorship.
+      </p>
 
-            <p class="slide-in delay-1">
-                From electrifying live events to educational programs and community
-                initiatives, Logic Spark exists to inspire the next generation.
-            </p>
+      <div class="home-actions">
+        <button class="primary-btn" onclick="showPage('activities')">Explore Activities</button>
+        <button class="secondary-btn" onclick="showPage('contact')">Get In Touch</button>
+      </div>
+    </div>
 
-            <div class="home-actions fade-in delay-2">
-                <button class="primary-btn" onclick="showPage('about')">Learn More</button>
-                <button class="secondary-btn" onclick="showPage('contact')">Get In Touch</button>
-            </div>
-         </div>
+    <div class="home-image">
+      <img src="images/pag1.png" alt="Youth Creative Event">
+    </div>
+  </div>
 
-         <div class="home-image">
-            <img src="images/spark.jpg" class="hero-img floating" alt="Logic Spark Hero Image">
-         </div>
-        </div>
-    </section>
+  <!-- FEATURES -->
+  <div class="home-features">
+    <div class="feature-card">
+      <img src="images/pag2.jpeg">
+      <h4>Corporate & Youth Events</h4>
+    </div>
 
-    <!-- ABOUT SECTION -->
+    <div class="feature-card">
+      <img src="images/gap.png">
+      <h4>Music & Festivals</h4>
+    </div>
+
+    <div class="feature-card">
+      <img src="images/mentorship.png">
+      <h4>Mentorship Programs</h4>
+    </div>
+  </div>
+
+  <!-- WHO WE ARE -->
+  <section class="home-section-block">
+    <div class="split">
+      <div>
+        <h2>Who We Are</h2>
+        <p>
+          Logic Spark Entertainment is more than an events company — we are a
+          <strong>movement</strong> dedicated to empowering young creatives.
+        </p>
+        <p>
+          We combine <strong>music</strong>, <strong>education</strong>,
+          <strong>mentorship</strong>, and <strong>innovation</strong> to build
+          platforms where talent is discovered, nurtured, and connected to
+          real-world opportunities.
+        </p>
+      </div>
+
+      <img src="images/pag2.jpeg" alt="Creative Youth Team">
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section class="home-section-block">
+    <h2 class="center">What We Do</h2>
+
+    <div class="cards">
+      <div class="info-card">
+        <h3>🎤 Events & Experiences</h3>
+        <p>
+          We organize corporate functions, youth forums, brand activations,
+          and community-driven events.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>🎶 Music & Festivals</h3>
+        <p>
+          From live shows to large-scale festivals like <strong>Future Fest</strong>,
+          we create unforgettable entertainment experiences.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>🎓 Mentorship & Training</h3>
+        <p>
+          We guide young creatives through skill development, mentorship,
+          and career exposure.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>📱 Digital Media</h3>
+        <p>
+          Podcasts, video content, interviews, and storytelling that amplify
+          youth voices.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>🤝 Opportunities</h3>
+        <p>
+          We connect creatives with brands, corporates, and employment
+          opportunities.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="home-section-block dark">
+    <h2 class="center">Why Logic Spark?</h2>
+
+    <div class="cards">
+      <div class="info-card">🎯 Youth-Centered Approach</div>
+      <div class="info-card">🤝 Corporate Partnerships</div>
+      <div class="info-card">🚀 Real Career Impact</div>
+      <div class="info-card">🎨 Creative Excellence</div>
+    </div>
+  </section>
+
+  <!-- VISION -->
+  <section class="home-section-block">
+    <h2 class="center">Our Vision</h2>
+    <p class="center max">
+      We envision a future where young creatives are empowered, skilled, and
+      confidently positioned within the creative and corporate economy.
+      Logic Spark exists to bridge the gap between talent and opportunity.
+    </p>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Ready to Spark the Future?</h2>
+    <p>
+      Whether you're a young creative, artist, or corporate partner —
+      there’s a place for you at Logic Spark.
+    </p>
+
+    <div class="home-actions">
+      <button class="primary-btn" onclick="showPage('activities')">Get Started</button>
+      <button class="secondary-btn" onclick="showPage('sponsor')">Partner With Us</button>
+    </div>
+  </section>
+
+</section>
+<!-- ================= END HOME PAGE ================= -->
+
+
+     <!-- ABOUT SECTION -->
     <section id="about" class="page about-section">
-    <h2>About Logic Spark Entertainment</h2>
+      <h2>About Logic Spark Entertainment</h2>
 
-    <!-- Block 1 -->
-    <div class="about-block">
+      <!-- Block 1 -->
+       <div class="about-block">
         <img src="images/youths.jpg" alt="Logic Spark Entertainment">
         <div class="about-text">
             <p>
@@ -71,10 +207,10 @@
                 education, and professional exposure.
             </p>
         </div>
-    </div>
+      </div>
 
-    <!-- Block 2 (image right) -->
-    <div class="about-block reverse">
+      <!-- Block 2 (image right) -->
+     <div class="about-block reverse">
         <img src="images/gap.png" alt="Youth Empowerment">
         <div class="about-text">
             <p>
@@ -83,10 +219,10 @@
                 opportunities.
             </p>
         </div>
-    </div>
+     </div>
 
-    <!-- What We Do -->
-    <div class="about-block">
+     <!-- What We Do -->
+     <div class="about-block">
         <img src="images/acts.png" alt="What We Do">
         <div class="about-text">
             <h3>What We Do</h3>
@@ -100,8 +236,8 @@
         </div>
     </div>
 
-    <!-- Vision -->
-    <div class="about-block reverse">
+     <!-- Vision -->
+     <div class="about-block reverse">
         <img src="images/vision.png" alt="Our Vision">
         <div class="about-text">
             <h3>Our Vision</h3>
